@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MusicPlus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link id="switch_style" href="/css/silver/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="/css/1-col-portfolio.css" rel="stylesheet">
+	<link href="/css/bootstrap1.css" rel="stylesheet">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	
+  <!--  Prinal start -->
+  <link href="/css/jqcloud.css" rel="stylesheet">
+  <!-- Prinal end -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap-transition.js"></script>
+    <script src="/js/bootstrap-alert.js"></script>
+    <script src="/js/bootstrap-modal.js"></script>
+    <script src="/js/bootstrap-dropdown.js"></script>
+    <script src="/js/bootstrap-scrollspy.js"></script>
+    <script src="/js/bootstrap-tab.js"></script>
+    <script src="/js/bootstrap-tooltip.js"></script>
+    <script src="/js/bootstrap-popover.js"></script>
+    <script src="/js/bootstrap-button.js"></script>
+    <script src="/js/bootstrap-collapse.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="/js/bootstrap-typeahead.js"></script>
+    <script src="/js/application.js"></script>
+	<script src="/js/prettify.js"> </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script src="/js/token.js"></script>
+	<script src="/js/hello.js"></script>
+	<style>
+	#go {
+            margin-top:-8px;
+            margin-right: 20px;
+        }
+
+    #bottom-buttons {
+            margin-top:4px;
+            width:280px;
+        }
+
+    #titles {
+            margin-left:30px;
+            margin-bottom:10px;
+        }
+
+    #rp-album-art {
+            height:280px;
+        }
+		
+	.hero-unit{
+		background-image:url("http://cdnet.myxer.com/tn/c/959846/big/?t=20081022135139");
+	}
+	
+	
+	body{
+	background-image:url("/img/grey-mosaic-14406.jpg");
+	}
+	
+	.style_image{
+		height: 150px;
+		width: 150px;
+	}
+	
+	#sngsearch{
+	
+	}
+	</style>
+	
+</head>	
+
+  <body BGPROPERTIES=FIXED >
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="container">
+
+<div class="row-fluid">
+    <div class="span9"><br/><h1 style="color:#CCFF00; font-size:30px">Music<span style="color:green">Plus</span> </h1>
+	</div>
+	<div class="span3"><br/>
+	<div class="pull-right">
+	<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-type="button"></div>
+	</div>
+	</div>
+	
+	
+</div><!-- /row-fluid -->
+
+<div class="navbar">
+    <div class="navbar-inner" style="height:42px">
+      <div class="container">
+        <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="index">Home</a></li>
+            <li><a href="playlist_songs">Radio</a></li>
+			<input id="hdn" name="txt"  type="text" style="display:none;"></input>
+            <li class="dropdown" style="margin-top: 7px;">
+              <select id="ddl" class="form-control span2" style="font-size:11px;height: 27px; background-color: gray;">
+			  <option selected="selected" style="color: gray;">Search</option>
+			  <option value="Song">Song</option>
+			  <option value="Album">Album</option>
+			  <option value="Artist">Artist</option>
+			</select>
+            </li>
+          </ul>
+          <form class="navbar-search pull-left" id="form1">
+            <input type="text" placeholder="Search" name="name" class="search-query span2" style="height: 27px;"></input>
+          </form>
+          <ul class="nav pull-right">
+            
+            <li class="divider-vertical"></li>
+            <li><a href="/song_searches/login">Login</a></li>
+			<li><a href="/song_searches/login">Logout</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div>
+	
+<%= yield %>
+<div class="row"><center><br/><br/>&copy; Allright reserved. <br/> <br/></center></div>
+
+</div>
+
+<div id="theme_switcher">
+<style>
+.container{width:970px}
+#theme_switcher {left: 10px;position: fixed;top: 10px;}
+</style>
+	<div class="btn-group" style="display:none">
+		<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">Choose Colors<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+            <li><a href="#" rel="silver">Silver</a></li>
+            <li><a href="#" rel="black">Black</a></li>
+			<li><a href="#" rel="blue">Blue</a></li>
+			<li><a href="#" rel="bluewhite">Blue White</a></li>
+            <li><a href="#" rel="greenyellow">Green Yellow</a></li>
+			<li><a href="#" rel="orange">Orange</a></li>
+            <li><a href="#" rel="siningblack">Sining Black</a></li>
+            <li><a href="#" rel="white">White</a></li>
+			<li><a href="#" rel="">Bootstrap</a></li>
+		</ul>
+	</div>
+</div>
+<script>
+$(function() {
+	$('#theme_switcher ul li a').bind('click',
+		function(e) {
+			$("#switch_style").attr("href", "css/"+$(this).attr('rel')+"/bootstrap.min.css");    		
+			return false;
+		}
+	);
+});
+</script>
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/jquery-expander-master/jquery.expander.js"></script>
+ 
+ <!--  Prinal start -->
+<script src="/js/jqcloud-1.0.4.min.js"></script>
+<script>
+	//doesn't block the load event
+	<% begin %>
+function createIframe(id) {
+    var i = document.createElement("iframe");
+    i.src = "https://embed.spotify.com/?uri=spotify:track:" + id ;
+    i.frameborder = "0";
+    i.width="300px";
+    i.height="80px"; 
+	i.allowtransparency="true";
+	var div_id = "iframe_container_" + id;
+    document.getElementById(div_id).appendChild(i);
+};
+<% rescue %>
+<% end %>
+
+	$(document).ready(function() {
+	
+	<% begin %>
+	<% for id, title, artName, type, img in @spotify_id %>
+		// Check for browser support of event handling capability
+		if (window.addEventListener) window.addEventListener("load", createIframe("<%= id %>"), false);
+		else if (window.attachEvent) window.attachEvent("onload", createIframe("<%= id %>"));
+		else window.onload = createIframe("<%= id %>");
+	<% end %>
+<% rescue %>
+<% end %>
+	
+  // simple example, using all default options unless overridden globally
+    $('div.expandable').expander({
+  	   slicePoint: 1900,
+  	});
+
+     $.get( "http://localhost:3000/genres/show", function( data ) {
+           $("div.span5").jQCloud(data);
+    });
+	
+  });
+  $( "#ddl" ).change(function() {
+	var e = document.getElementById("ddl");
+	var option = e.options[e.selectedIndex].value;
+	if(option == "Song")
+	{
+		$('#form1').attr('action', '/song_searches/show');
+	}
+	else if(option == "Artist")
+	{
+		$('#form1').attr('action', '/song_searches/artist');
+	}
+	else if(option == "Album")
+	{
+		$('#form1').attr('action', '/song_searches/album');
+	}
+	});
+  </script>
+  
+   <!--  Prinal end -->
+  </body>
+</html>
+

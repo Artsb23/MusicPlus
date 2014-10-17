@@ -1,0 +1,46 @@
+
+	<div class="container">
+
+        <div class="row" >
+
+            <div class="col-lg-12">
+                <h1 style="color:darkgrey;">Song Search Results
+                </h1>
+            </div>
+			<br>
+			<br>
+			<hr>
+
+        </div>
+		<% for id, title, artName, type, img in @spotify_id %>
+        <div class="row" id="sngsearch" style="height:165px">
+
+            <div class="col-lg-7 col-md-7" style="height:165px" >
+			<div style="float:left">
+				<p ><%= link_to (image_tag img, :class => 'style_image'), {:controller => 'song_searches', :action => 'artist', :param => artName}%><p>
+            </div> 
+			<div style="width:10px; height:10px; float:left;"></div>
+			<div style="float:left">
+                <h3>Title &nbsp;&nbsp;: <span class="text-muted text-center"><%= title %></span></h3>
+				<h4>Artist &nbsp;&nbsp;&nbsp;: <%= link_to (artName), {:controller => 'song_searches', :action => 'artist', :param => artName}%></h4>
+				<h4>Genre  &nbsp;: &nbsp;<span class="text-muted text-center"><% type.each do |type|%><%= type %> <% end %></span></h4>
+				
+			</div>
+            </div>
+
+            <div id="iframe_container_<%= id %>" class="col-lg-5 col-md-5" style="top: 50px;">
+                
+            </div>
+
+        </div>
+		 <hr>
+		<% end %>
+       
+
+        <div class="row text-center">
+
+            
+
+        </div>
+	
+

@@ -1,0 +1,43 @@
+
+ <div class="container">
+    <div class="span6" style="margin-left: -50px;float:left">
+	<br>
+		<form action="/song_searches/test_type" class="" id="form">
+			<p align="center"> <button id="playlist_artist" name="name" value = "artist" class="btn btn-primary"> Artist </button> &nbsp;/&nbsp; <button id="playlist_genre" name="name" value="genre" class="btn btn-primary"> Genre </button><p>
+		</form>
+		<% begin %>
+		<% unless params[:name].empty? %>
+		 <form action="/song_searches/playlist_songs" class="" id="form">
+			 <div align="center">
+						<input id="artist" type="search" name="name" placeholder="Enter name ..." </input>
+						<button id="playlist_submit" class="btn btn-primary" style="margin-top: -7px;"> Create Playlist </button>
+			 </div>
+		 </form> 
+		 <% end %>
+		<% rescue %>
+		<% end %>
+	</div>
+ 
+<div class="span5" style="float:right">
+		<div id="tagCloud" style="height: 500px;"></div>
+</div>
+<% begin %> 
+<% if params[:name].empty? %>
+	<span style="color:red; margin-left: 120px;"> Please enter an artist name</span>
+ <% elsif  params[:name] != "artist" && params[:name] != "genre"%>
+	 <div id="all-results" style="margin-left: 120px;float:left;">
+			<div class="hero-unit span6" style="height:540px;margin-left: -170px;">
+				<div id="results" style="height:550px"> 
+					<iframe  src="https://embed.spotify.com/?uri=spotify:trackset:<%= @song_search.song_name%> playlist:<%= @song_search.songs %>" frameborder="0" allowtransparency="true" width="100%" height="500px"></iframe>
+				</div>
+			</div>
+	 </div>
+
+<% end %>
+
+<% rescue %>
+
+<% end %>
+
+</div>
+
